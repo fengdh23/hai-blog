@@ -16,17 +16,41 @@ export default function Home() {
 	const { maxSM } = useSize()
 
 	return (
-		<div className='max-sm:flex max-sm:flex-col max-sm:items-center max-sm:gap-6 max-sm:pt-28 max-sm:pb-20'>
-			<ArtCard />
-			<HiCard />
-			{!maxSM && <ClockCard />}
-			{!maxSM && <CalendarCard />}
-			{!maxSM && <MusicCard />}
-			<SocialButtons />
-			{!maxSM && <ShareCard />}
-			<AritcleCard />
-			{!maxSM && <WriteButtons />}
-			<LikePosition />
-		</div>
-	)
+	// 	<div className='max-sm:flex max-sm:flex-col max-sm:items-center max-sm:gap-6 max-sm:pt-28 max-sm:pb-20'>
+	// 		<ArtCard />
+	// 		<HiCard />
+	// 		{!maxSM && <ClockCard />}
+	// 		{!maxSM && <CalendarCard />}
+	// 		{!maxSM && <MusicCard />}
+	// 		<SocialButtons />
+	// 		{!maxSM && <ShareCard />}
+	// 		<AritcleCard />
+	// 		{!maxSM && <WriteButtons />}
+	// 		<LikePosition />
+	// 	</div>
+	// )
+		<div className="grid grid-cols-3 gap-6">
+		{/* 第一列 */}
+	<div className="flex flex-col gap-6">
+		<ArtCard />
+		<ClockCard />
+		<MusicCard />
+	</div>
+
+	{/* 中间列 */}
+	<div className="flex flex-col gap-6">
+		<HiCard />
+		<CalendarCard />
+		<ShareCard />
+	</div>
+
+	{/* 第三列 */}
+	<div className="flex flex-col gap-6">
+		<SocialButtons />
+		<AritcleCard />
+		<WriteButtons />
+		<LikePosition />
+	</div>
+</div>
+)
 }
